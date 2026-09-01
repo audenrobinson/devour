@@ -27,3 +27,8 @@ html,body{max-width:100%;overflow-x:hidden}
   .service-title.systems-title{font-size:1.42rem}
   .price strong{font-size:3.1rem}
 }
+
+
+/* Short ink-style takeaway at the end of each information paragraph. */
+.ink-quote{display:block;margin-top:1.1em;color:var(--ink);font-size:.82em;font-weight:700;font-style:italic;line-height:1.55;letter-spacing:.015em}
+@media(max-width:660px){.ink-quote{margin-top:.9em;font-size:.86em}}
