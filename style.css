@@ -12,3 +12,27 @@
 .circle-right .systems-label{max-width:88%;font-size:clamp(.68rem,1.2vw,1rem);line-height:1.18;letter-spacing:.04em}
 
 .circle-top{animation:floatTopCircle 5.4s ease-in-out 10.25s infinite alternate}.circle-left{animation:floatLeftCircle 6.1s ease-in-out 10.45s infinite alternate}.circle-right{animation:floatRightCircle 5.8s ease-in-out 10.65s infinite alternate}@keyframes floatTopCircle{0%{transform:translateX(-50%) translateY(0) rotate(0)}100%{transform:translateX(-50%) translateY(-12px) rotate(.7deg)}}@keyframes floatLeftCircle{0%{transform:translate3d(0,0,0) rotate(0)}100%{transform:translate3d(7px,-11px,0) rotate(-.8deg)}}@keyframes floatRightCircle{0%{transform:translate3d(0,0,0) rotate(0)}100%{transform:translate3d(-7px,-13px,0) rotate(.8deg)}}@media(prefers-reduced-motion:reduce){.circle-top,.circle-left,.circle-right{animation:none}}
+
+/* Responsive safeguards: preserve the design while preventing clipping on narrow or short screens. */
+html,body{overflow-x:hidden}main{min-height:100dvh}
+@media(max-width:620px){
+  main{min-height:560px;overflow-x:hidden;overflow-y:visible}
+  :root{--title-size:clamp(1.35rem,7.8vw,2.75rem)}
+  .specialty-map{top:92px;height:auto;width:min(94vw,560px)}
+  .specialty-map h2{padding:0 10px;font-size:clamp(1rem,5vw,1.18rem)}
+  .triangle-map{width:min(92vw,520px);height:clamp(350px,58dvh,450px)}
+  .ink-circle{width:clamp(108px,34vw,150px)}
+  .ink-circle h3{max-width:82%;font-size:clamp(.65rem,3vw,.76rem);overflow-wrap:anywhere}
+  .circle-right .systems-label{max-width:86%;font-size:clamp(.6rem,2.65vw,.72rem)}
+}
+@media(max-width:350px){
+  .triangle-map{width:94vw}
+  .ink-circle{width:104px}
+  .specialty-map h2{font-size:1rem}
+}
+@media(max-height:500px) and (orientation:landscape){
+  main{min-height:520px;overflow-y:visible}
+  .specialty-map{top:78px}
+  .specialty-map h2{margin-bottom:14px}
+  .triangle-map{height:350px}
+}
