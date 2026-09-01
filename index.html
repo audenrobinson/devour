@@ -7,19 +7,10 @@
   <title>Trinicle Marketing | Your Three Ways to Success</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="locked">
-  <section class="envelope-stage" id="envelope">
-    <div class="envelope-image envelope-closed"></div>
-    <div class="envelope-image envelope-open"></div>
-    <div class="intro-brand">Trinicle Marketing</div>
-    <button class="wax-button" id="open-letter" aria-label="Open the Trinicle Marketing letter"><span>OPEN</span></button>
-    <p class="open-note">Break the seal</p>
-  </section>
-
-  <main class="letter-page" id="letter">
-    <div class="paper-grain"></div>
+<body>
+  <main class="letter-page">
     <header class="letter-header">
-      <a class="wordmark" href="#top"><span class="written-title">Trinicle Marketing</span></a>
+      <a class="wordmark" href="#top" aria-label="Trinicle Marketing home"><span class="written-title">Trinicle Marketing</span></a>
       <a class="talk-link" href="mailto:hello@triniclemarketing.com">Let's talk <span>↗</span></a>
     </header>
     <section class="hero" id="top">
@@ -44,14 +35,5 @@
     </section>
     <footer><span>TRINICLE MARKETING</span><span>© 2026</span></footer>
   </main>
-  <script>
-    const envelope=document.getElementById('envelope');
-    const letter=document.getElementById('letter');
-    document.getElementById('open-letter').addEventListener('click',()=>{
-      if(envelope.classList.contains('is-opening'))return;
-      envelope.classList.add('is-opening');
-      setTimeout(()=>{envelope.classList.add('is-gone');letter.classList.add('is-visible');document.body.classList.remove('locked')},1950);
-    });
-  </script>
 </body>
 </html>
