@@ -6,3 +6,24 @@
 .site-mark{transition:color .22s ease}.site-mark:hover,.site-mark:focus-visible{color:var(--blue);outline:none}
 
 .price-row{display:flex;align-items:flex-end;gap:clamp(18px,3vw,38px)}.price-row span{padding-bottom:clamp(8px,1.2vw,17px);color:#827b72;font-size:clamp(.68rem,.9vw,.8rem);font-weight:500;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}@media(max-width:480px){.price-row{align-items:flex-start;flex-direction:column;gap:10px}.price-row span{padding-bottom:0}}
+
+/* Responsive safeguards for every service page. */
+html,body{max-width:100%;overflow-x:hidden}
+.service-page,.service-content,.info-block{min-width:0}
+.info-block p{overflow-wrap:break-word}
+@media(max-width:660px){
+  .service-page{width:calc(100% - 32px);padding-top:96px;padding-bottom:64px}
+  .service-title{font-size:clamp(2rem,12vw,4.5rem);max-width:100%;margin-bottom:52px}
+  .service-title.long-title{font-size:clamp(1.65rem,8.7vw,3.5rem)}
+  .service-title.systems-title{font-size:clamp(1.55rem,8.1vw,3.35rem)}
+  .service-title span{max-width:0}
+  .info-block p{font-size:1rem;line-height:1.75}
+  .price strong{font-size:clamp(3.25rem,18vw,6rem)}
+  .back-link{max-width:100%;font-size:.68rem;line-height:1.5;letter-spacing:.12em}
+}
+@media(max-width:350px){
+  .service-page{width:calc(100% - 24px)}
+  .service-title.long-title{font-size:1.55rem}
+  .service-title.systems-title{font-size:1.42rem}
+  .price strong{font-size:3.1rem}
+}
