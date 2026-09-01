@@ -4,3 +4,5 @@
 @media(max-width:660px){.service-title.systems-title{font-size:clamp(2rem,9vw,3.35rem)}}
 
 .site-mark{transition:color .22s ease}.site-mark:hover,.site-mark:focus-visible{color:var(--blue);outline:none}
+
+.price-row{display:flex;align-items:flex-end;gap:clamp(18px,3vw,38px)}.price-row span{padding-bottom:clamp(8px,1.2vw,17px);color:#827b72;font-size:clamp(.68rem,.9vw,.8rem);font-weight:500;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}@media(max-width:480px){.price-row{align-items:flex-start;flex-direction:column;gap:10px}.price-row span{padding-bottom:0}}
