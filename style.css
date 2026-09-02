@@ -7,7 +7,7 @@
 
 .ink-circle{isolation:isolate;background:var(--paper)}.ink-circle svg{transform:rotate(-91deg) scale(.985)}.ink-circle .ink-ring{stroke:#000;stroke-width:7;stroke-opacity:1;stroke-dasharray:641;vector-effect:non-scaling-stroke}.ink-circle .ink-ghost{stroke:#171512;stroke-width:.85;stroke-opacity:.16;stroke-dasharray:5 8 24 5 3 11}.ink-circle:before{content:"";position:absolute;z-index:3;inset:-8%;pointer-events:none;border-radius:50%;opacity:.32;background:radial-gradient(circle at 14% 36%,#171512 0 1.2px,transparent 1.5px),radial-gradient(circle at 21% 78%,#171512 0 1px,transparent 1.35px),radial-gradient(circle at 47% 1%,#171512 0 1.3px,transparent 1.65px),radial-gradient(circle at 73% 8%,#171512 0 .8px,transparent 1.2px),radial-gradient(circle at 96% 48%,#171512 0 1.1px,transparent 1.45px),radial-gradient(circle at 81% 85%,#171512 0 1.4px,transparent 1.8px),radial-gradient(ellipse at 11% 60%,#17151255 0 2px,transparent 4px),radial-gradient(ellipse at 65% 96%,#17151245 0 2px,transparent 5px)}.ink-circle:after{content:"";position:absolute;z-index:0;inset:3%;border-radius:50%;pointer-events:none;box-shadow:inset 1px -1px 2px #17151212,-1px 1px 1px #1715120c}
 
-.ink-circle{color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .28s ease}.ink-circle h3{transform-origin:center;transition:color .25s ease,transform .32s cubic-bezier(.2,.8,.2,1)}.ink-circle:hover h3,.ink-circle:focus-visible h3{color:#165dff;transform:scale(1.14)}.ink-circle:hover,.ink-circle:focus-visible{outline:none}.ink-circle:focus-visible .ink-ring{stroke:#165dff}
+.ink-circle{color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .28s ease}.ink-circle h3{transform-origin:center;transition:color .25s ease,transform .32s cubic-bezier(.2,.8,.2,1)}.ink-circle:hover h3,.ink-circle:focus-visible h3{color:#165dff}.ink-circle:hover,.ink-circle:focus-visible{outline:none}.ink-circle:focus-visible .ink-ring{stroke:#165dff}
 
 .circle-right .systems-label{max-width:88%;font-size:clamp(.68rem,1.2vw,1rem);line-height:1.18;letter-spacing:.04em}
 
@@ -38,34 +38,17 @@ html,body{overflow-x:hidden}main{min-height:100dvh}
 }
 
 
-/* Clear, contained heartbeat interaction for specialty links. */
-@keyframes labelHeartbeat{
+/* Hover affects only the inner label, leaving the circle and reveal animation untouched. */
+@keyframes textHeartbeat{
   0%,100%{transform:scale(1)}
   38%{transform:scale(1.1)}
-  62%{transform:scale(1.045)}
+  62%{transform:scale(1.04)}
 }
-@keyframes ringHeartbeat{
-  0%,100%{stroke-width:7;stroke-opacity:1}
-  38%{stroke-width:8.5;stroke-opacity:.82}
-  62%{stroke-width:7.5;stroke-opacity:1}
+.ink-circle h3>span{display:block;transform-origin:center;will-change:transform}
+.ink-circle:hover h3>span,.ink-circle:focus-visible h3>span{
+  animation:textHeartbeat .95s cubic-bezier(.22,.7,.3,1) infinite;
 }
-.ink-circle:hover h3,.ink-circle:focus-visible h3{
-  color:#165dff;
-  animation:labelHeartbeat .95s cubic-bezier(.22,.7,.3,1) infinite;
-}
-.ink-circle:hover .ink-ring,.ink-circle:focus-visible .ink-ring{
-  animation:ringHeartbeat .95s cubic-bezier(.22,.7,.3,1) infinite;
-}
-.circle-right:hover .systems-label,.circle-right:focus-visible .systems-label{
-  animation-name:systemsLabelHeartbeat;
-}
-@keyframes systemsLabelHeartbeat{
-  0%,100%{transform:scale(1)}
-  38%{transform:scale(1.065)}
-  62%{transform:scale(1.025)}
-}
+.circle-right .systems-label>span{transform-origin:center}
 @media(prefers-reduced-motion:reduce){
-  .ink-circle:hover h3,.ink-circle:focus-visible h3{animation:none;transform:scale(1.07)}
-  .circle-right:hover .systems-label,.circle-right:focus-visible .systems-label{transform:scale(1.045)}
-  .ink-circle:hover .ink-ring,.ink-circle:focus-visible .ink-ring{animation:none;stroke-width:8}
+  .ink-circle:hover h3>span,.ink-circle:focus-visible h3>span{animation:none;transform:scale(1.07)}
 }
