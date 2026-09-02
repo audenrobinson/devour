@@ -34,3 +34,8 @@ html,body{max-width:100%;overflow-x:hidden}
 .service-tagline{max-width:680px;margin:0 auto clamp(65px,9vw,105px);padding:0 12px;color:#777067;font-size:clamp(.88rem,1.35vw,1.05rem);font-weight:500;font-style:italic;line-height:1.6;text-align:center}
 @media(max-width:660px){.service-title{margin-bottom:16px}.service-tagline{margin-bottom:52px;padding:0 8px;font-size:.9rem}}
 /* quote deployment version: 20260902 */
+
+/* Responsive two-price range for Digital Business Systems. */
+.price strong.price-range{font-size:clamp(3rem,7.4vw,6.4rem);white-space:nowrap}
+@media(max-width:660px){.price strong.price-range{font-size:clamp(2.25rem,10.5vw,4.4rem)}}
+@media(max-width:350px){.price strong.price-range{font-size:2.05rem}}
