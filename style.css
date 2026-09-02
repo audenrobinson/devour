@@ -74,3 +74,10 @@ html,body{overflow-x:hidden}main{min-height:100dvh}
 .inquiry-cta-content{position:relative;z-index:4;display:flex;width:min(720px,100%);flex-direction:column;align-items:center;text-align:center}
 .inquiry-cta-content p{margin:0 0 clamp(34px,5vw,50px);color:#5f5951;font-size:clamp(1rem,1.8vw,1.22rem);line-height:1.8}
 @media(max-width:620px){.inquiry-cta-content p{font-size:.98rem;line-height:1.7}}
+
+
+/* Instruction centred within the three-service triangle. */
+.triangle-instruction{position:absolute;z-index:4;top:58%;left:50%;width:min(190px,28%);margin:0;color:#000;font-size:clamp(.72rem,1.15vw,.9rem);font-weight:600;line-height:1.5;text-align:center;transform:translate(-50%,-50%);opacity:0;animation:inkHeading .65s cubic-bezier(.16,.78,.2,1) 9.15s forwards;pointer-events:none}
+@media(max-width:620px){.triangle-instruction{top:57%;width:32%;font-size:clamp(.59rem,2.45vw,.72rem);line-height:1.38}}
+@media(max-width:350px){.triangle-instruction{width:31%;font-size:.56rem}}
+@media(prefers-reduced-motion:reduce){.triangle-instruction{opacity:1;animation:none}}
