@@ -36,3 +36,36 @@ html,body{overflow-x:hidden}main{min-height:100dvh}
   .specialty-map h2{margin-bottom:14px}
   .triangle-map{height:350px}
 }
+
+
+/* Clear, contained heartbeat interaction for specialty links. */
+@keyframes labelHeartbeat{
+  0%,100%{transform:scale(1)}
+  38%{transform:scale(1.1)}
+  62%{transform:scale(1.045)}
+}
+@keyframes ringHeartbeat{
+  0%,100%{stroke-width:7;stroke-opacity:1}
+  38%{stroke-width:8.5;stroke-opacity:.82}
+  62%{stroke-width:7.5;stroke-opacity:1}
+}
+.ink-circle:hover h3,.ink-circle:focus-visible h3{
+  color:#165dff;
+  animation:labelHeartbeat .95s cubic-bezier(.22,.7,.3,1) infinite;
+}
+.ink-circle:hover .ink-ring,.ink-circle:focus-visible .ink-ring{
+  animation:ringHeartbeat .95s cubic-bezier(.22,.7,.3,1) infinite;
+}
+.circle-right:hover .systems-label,.circle-right:focus-visible .systems-label{
+  animation-name:systemsLabelHeartbeat;
+}
+@keyframes systemsLabelHeartbeat{
+  0%,100%{transform:scale(1)}
+  38%{transform:scale(1.065)}
+  62%{transform:scale(1.025)}
+}
+@media(prefers-reduced-motion:reduce){
+  .ink-circle:hover h3,.ink-circle:focus-visible h3{animation:none;transform:scale(1.07)}
+  .circle-right:hover .systems-label,.circle-right:focus-visible .systems-label{transform:scale(1.045)}
+  .ink-circle:hover .ink-ring,.ink-circle:focus-visible .ink-ring{animation:none;stroke-width:8}
+}
