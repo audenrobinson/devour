@@ -35,7 +35,12 @@ html,body{max-width:100%;overflow-x:hidden}
 @media(max-width:660px){.service-title{margin-bottom:16px}.service-tagline{margin-bottom:52px;padding:0 8px;font-size:.9rem}}
 /* quote deployment version: 20260902 */
 
-/* Responsive two-price range for Digital Business Systems. */
-.price strong.price-range{font-size:clamp(3rem,7.4vw,6.4rem);white-space:nowrap}
-@media(max-width:660px){.price strong.price-range{font-size:clamp(2.25rem,10.5vw,4.4rem)}}
-@media(max-width:350px){.price strong.price-range{font-size:2.05rem}}
+/* Separate Digital Business Systems products. */
+.price-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,56px);margin-top:32px}
+.price-option{min-width:0;padding-top:24px;border-top:1px solid #302b2444}
+.price-option h2{min-height:3em;margin:0 0 22px;font-size:clamp(.72rem,1.1vw,.85rem);line-height:1.5;letter-spacing:.16em;text-transform:uppercase}
+.price-option .price-row{gap:clamp(10px,1.5vw,20px)}
+.price-option .price-row strong{font-size:clamp(3.2rem,7vw,6rem)}
+.setup-fee{margin:14px 0 0!important;color:#827b72;font-size:clamp(.76rem,1vw,.9rem)!important;font-weight:500!important;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:700px){.price-options{grid-template-columns:1fr;gap:42px}.price-option h2{min-height:0}.price-option .price-row{flex-direction:row;align-items:flex-end}.price-option .price-row span{padding-bottom:clamp(7px,2vw,12px)}.price-option .price-row strong{font-size:clamp(3.2rem,17vw,5rem)}}
+@media(max-width:380px){.price-option .price-row{align-items:flex-start;flex-direction:column}.price-option .price-row span{padding-bottom:0}}
