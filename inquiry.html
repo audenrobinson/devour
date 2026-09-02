@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contact Trinicle Marketing about AI SEO, AI Advertising, Website Design, CRM or Dashboard Creation.">
+  <title>Inquiry | Trinicle Marketing</title>
+  <link rel="stylesheet" href="inquiry.css">
+</head>
+<body>
+  <a class="site-mark" href="index.html" aria-label="Return to the Trinicle Marketing homepage">[TM]</a>
+
+  <main class="inquiry-page">
+    <header>
+      <h1>Trinicle Marketing<br>Inquiry Page</h1>
+      <p>Tell us what your business needs and we’ll take it from there.</p>
+    </header>
+
+    <form id="inquiry-form" novalidate>
+      <div class="field">
+        <label for="recipient">To</label>
+        <!-- Replace this value with the Trinicle Marketing email address when ready. -->
+        <input id="recipient" name="recipient" type="email" value="your-email@example.com" readonly aria-readonly="true">
+      </div>
+
+      <div class="contact-grid">
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+      </div>
+
+      <fieldset class="plans">
+        <legend>Which service are you interested in?</legend>
+        <p>Select one or as many as you need.</p>
+        <div class="plan-grid">
+          <label class="plan-option"><input type="checkbox" name="plan" value="Business Systems (CRM or Dashboard)"><span>Business Systems<small>CRM or Dashboard</small></span></label>
+          <label class="plan-option"><input type="checkbox" name="plan" value="Business Systems (Website)"><span>Business Systems<small>Website Design</small></span></label>
+          <label class="plan-option"><input type="checkbox" name="plan" value="AI SEO"><span>AI SEO</span></label>
+          <label class="plan-option"><input type="checkbox" name="plan" value="AI Advertising"><span>AI Advertising</span></label>
+        </div>
+        <p class="plan-error" id="plan-error" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" placeholder="Tell us about your business and what you would like help with." required></textarea>
+      </div>
+
+      <button type="submit" id="send-button" disabled>Send Inquiry</button>
+      <p class="form-note">All fields are required.</p>
+    </form>
+  </main>
+
+  <script src="inquiry.js"></script>
+</body>
+</html>
